@@ -7,6 +7,10 @@ class Bakery {
         this.packService = new PackService();
     }
 
+    /**
+     * Read orders from input.txt in current directory
+     * @return {object} an array of order object, which is something like {qty: 10, code: 'VS5', raw: '10 VS5'}
+     */
     readOrders() {
         let content = fs.readFileSync('./input.txt');
         content = content ? content.toString() : '';
@@ -15,6 +19,10 @@ class Bakery {
         return lines.map( line => { let spt = line.split(/\s+/); return {qty: spt[0], code: spt[1], raw: line}; });
     }
 
+    /**
+     * call readOrders() method and then process them one by one
+     * by calling packService.processOrder(), and print result
+     */
     processOrders() {
         let orders = this.readOrders();
         (orders || []).forEach( order => {

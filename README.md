@@ -55,7 +55,8 @@ A​ ​successfully​ ​passing​ ​test(s)​ ​that​ ​demonstrates�
 * If​ ​something​ ​is​ ​not​ ​clear​ ​don’t​ ​hesitate​ ​to​ ​ask​ ​or​ ​just​ ​make​ an​ ​assumption​ ​and​ ​go​ ​with​ ​it PredictiveHire​ ​-​ ​Bakery
 
 ## Development Assumptions
-* For input 14 MB11, actually there is another option "2 x 2 ​​$9.95 + 2 x 5 $16.95". As the requirement expects the output should be "1 ​x​​ 8​ ​$24.95 + 3 x 2 $9.95", assume that if the number of packs are the same, system should try to use pack with bigger size first. This is done by pass in the pack options in descending order.
+* Assume the bakery code (e.g. VS5) is the unique identifer.
+* For input 14 MB11, actually there is another 4-pack combination: "2 x 2 ​​$9.95 + 2 x 5 $16.95". As the requirement expects the output should be "1 ​x​​ 8​ ​$24.95 + 3 x 2 $9.95", assume that if the number of packs are the same, system should try to use pack with bigger size first. This is done by pass in the pack options in descending order.
 * Assume input is in a plain text file 'input.txt', each line contains one code and one quantity, separated by space(s).
 
 ## Installation, test and run

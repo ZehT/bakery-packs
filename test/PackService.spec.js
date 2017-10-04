@@ -57,7 +57,7 @@ describe('PackService', () => {
     });
 
     it('should produce PackQty=4, Packs=[9, 9, 9, 9] given pack options [10,9,2] and Qty 36', () => {
-        var qty = 36, packs = [2,9,10], resultQty = 4, resultPacks = [9, 9, 9, 9];
+        var qty = 36, packs = [10, 9, 2], resultQty = 4, resultPacks = [9, 9, 9, 9];
         var result = service.calcuateMinPacks(packs, qty);
         expect(result.packQty).to.equal(resultQty);
         expect(result.packs.sort()).to.deep.equal(resultPacks);
