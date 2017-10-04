@@ -53,3 +53,12 @@ A​ ​successfully​ ​passing​ ​test(s)​ ​that​ ​demonstrates�
   * You​ ​can​ ​do​ ​everything​ ​in​ ​memory​ ​or​ ​use​ ​files​ ​to​ ​store​ ​your​ ​configuration
   * This​ ​covers​ ​all​ ​aspects​ ​of​ ​code​ ​maintainability,​ ​readability​ ​and​ ​modelling
 * If​ ​something​ ​is​ ​not​ ​clear​ ​don’t​ ​hesitate​ ​to​ ​ask​ ​or​ ​just​ ​make​ an​ ​assumption​ ​and​ ​go​ ​with​ ​it PredictiveHire​ ​-​ ​Bakery
+
+## Development Assumptions
+* For input 14 MB11, actually there is another option "2 x 2 ​​$9.95 + 2 x 5 $16.95". As the requirement expects the output should be "1 ​x​​ 8​ ​$24.95 + 3 x 2 $9.95", assume that if the number of packs are the same, system should try to use pack with bigger size first. This is done by pass in the pack options in descending order.
+* Assume input is in a plain text file 'input.txt', each line contains one code and one quantity, separated by space(s).
+
+## Installation, test and run
+* Installation: npm install
+* Unit testing: npm test
+* Run: npm start (system will based on NODE_ENV environment variable to load env specific bakery metadata)
